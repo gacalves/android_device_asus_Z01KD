@@ -17,7 +17,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_Z01KD
-PRODUCT_DEVICE := Z01KD
+PRODUCT_DEVICE := ASUS_Z01KD
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := Zenfone 4
 PRODUCT_MANUFACTURER := asus
@@ -25,9 +25,9 @@ PRODUCT_MANUFACTURER := asus
 PRODUCT_GMS_CLIENTID_BASE := android-asus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_DEVICE=ASUS_Z01KD_2 \
+    PRODUCT_DEVICE=ASUS_Z01KD \
     PRODUCT_NAME=WW_Z01KD \
     PRIVATE_BUILD_DESC="WW_Phone-user 8.0.0 OPR1.170623.032 15.0610.1909.39-0 release-keys"
 
 # Build fingerprint
-BUILD_FINGERPRINT := "asus/WW_Z01KD/ASUS_Z01KD_2:8.0.0/OPR1.170623.032/15.0610.1909.39-0:user/release-keys"
+BUILD_FINGERPRINT := "asus/WW_Z01KD/ASUS_Z01KD:8.0.0/OPR1.170623.032/15.0610.1909.39-0:user/release-keys"
