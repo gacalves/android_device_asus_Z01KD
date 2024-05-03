@@ -27,33 +27,44 @@
 #
 #
 
-# TODO: o sensor de proximidade e luz é este?
 on boot
-    # Permissions for stk3x1x promiximity and light sensors
-    chmod 0644 /sys/class/sensors/stk3x1x-proximity/sensors_enable
-    chmod 0644 /sys/class/sensors/stk3x1x-proximity/sensors_delay
-    chmod 0644 /sys/class/sensors/stk3x1x-proximity/sensors_calibrate
-    chmod 0644 /sys/class/sensors/stk3x1x-proximity/sensors_enable_wakeup
-    chmod 0644 /sys/class/sensors/stk3x1x-proximity/sensors_flush
-    chmod 0644 /sys/class/sensors/stk3x1x-proximity/sensors_name
-    chown system system /sys/class/sensors/stk3x1x-proximity/sensors_enable
-    chown system system /sys/class/sensors/stk3x1x-proximity/sensors_delay
-    chown system system /sys/class/sensors/stk3x1x-proximity/sensors_calibrate
-    chown system system /sys/class/sensors/stk3x1x-proximity/sensors_enable_wakeup
-    chown system system /sys/class/sensors/stk3x1x-proximity/sensors_flush
-    chown system system /sys/class/sensors/stk3x1x-proximity/sensors_name
+    #ASUS_BSP +++ ShawnHuang "Proximity/Light sensor"
+    chown system shell /sys/class/sensors/psensor/switch
+    chown system shell /sys/class/sensors/lsensor/switch
+    chown system shell /sys/class/sensors/frgbsensor/switch
+    chown system shell /sys/class/sensors/psensor/inf_cal
+    chown system shell /sys/class/sensors/psensor/hi_cal
+    chown system shell /sys/class/sensors/psensor/low_cal
+    chown system shell /sys/class/sensors/psensor/proxm
+    chown system shell /sys/class/sensors/psensor/selection
+    chown system shell /sys/class/sensors/lsensor/selection
+    chown system shell /sys/class/sensors/lsensor/cal
+    chown system shell /sys/class/sensors/lsensor/adc
 
-    chmod 0644 /sys/class/sensors/stk3x1x-light/sensors_enable
-    chmod 0644 /sys/class/sensors/stk3x1x-light/sensors_delay
-    chmod 0644 /sys/class/sensors/stk3x1x-light/sensors_calibrate
-    chmod 0644 /sys/class/sensors/stk3x1x-light/sensors_enable_wakeup
-    chmod 0644 /sys/class/sensors/stk3x1x-light/sensors_flush
-    chmod 0644 /sys/class/sensors/stk3x1x-light/sensors_name
-    chown system system /sys/class/sensors/stk3x1x-light/sensors_enable
-    chown system system /sys/class/sensors/stk3x1x-light/sensors_delay
-    chown system system /sys/class/sensors/stk3x1x-light/sensors_calibrate
-    chown system system /sys/class/sensors/stk3x1x-light/sensors_enable_wakeup
-    chown system system /sys/class/sensors/stk3x1x-light/sensors_flush
-    chown system system /sys/class/sensors/stk3x1x-light/sensors_name
+    # Allow access to sensors device attributes
+    chown system system /sys/class/sensors/MPU6050-accel/enable
+    chown system system /sys/class/sensors/MPU6050-accel/poll_delay
+    chown system system /sys/class/sensors/MPU6050-gyro/enable
+    chown system system /sys/class/sensors/MPU6050-gyro/poll_delay
+    chown system system /sys/class/sensors/apds9930-light/enable
+    chown system system /sys/class/sensors/apds9930-light/poll_delay
+    chown system system /sys/class/sensors/apds9930-proximity/enable
+    chown system system /sys/class/sensors/apds9930-proximity/poll_delay
+    chown system system /sys/class/sensors/compass/enable
+    chown system system /sys/class/sensors/compass/poll_delay
+    chown system system /sys/class/sensors/bma2x2-accel/enable
+    chown system system /sys/class/sensors/bma2x2-accel/poll_delay
+    chown system system /sys/class/sensors/ltr553-light/enable
+    chown system system /sys/class/sensors/ltr553-light/poll_delay
+    chown system system /sys/class/sensors/ltr553-proximity/enable
+    chown system system /sys/class/sensors/ltr553-proximity/poll_delay
+    chown system system /sys/class/sensors/ap3426-light/enable
+    chown system system /sys/class/sensors/ap3426-light/poll_delay
+    chown system system /sys/class/sensors/ap3426-proximity/enable
+    chown system system /sys/class/sensors/ap3426-proximity/poll_delay
 
-    chown radio radio sys/module/stk3x1x/parameters/call_status_flag
+    chmod 0660 /dev/ttyHS2
+    chown bluetooth bluetooth /dev/ttyHS2
+
+    chown bluetooth net_bt /sys/class/rfkill/rfkill0/device/extldo
+    chmod 0660 /sys/class/rfkill/rfkill0/device/extldo

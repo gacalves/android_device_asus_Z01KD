@@ -15,7 +15,7 @@ TARGET_SCREEN_WIDTH := 1080
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
-# TODO: as permissões deste arquivo estão corretas?
+# Based on /vendor/etc/init/hw/init.qcom.rc
 # Ramdisk
 PRODUCT_PACKAGES += \
     init.device.rc
