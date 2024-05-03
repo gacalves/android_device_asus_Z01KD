@@ -1451,3 +1451,15 @@ vendor/lib/libchromatix_ov13855_default_video_bu64297.so
 
 # Camera firmware
 vendor/firmware/cpp_firmware_v1_12_0.fw
+
+# GPU firmware
+vendor/firmware/a508_zap.b00
+vendor/firmware/a508_zap.b02
+vendor/firmware/a508_zap.b01
+vendor/firmware/a508_zap.mdt
+vendor/firmware/a508_zap.elf
+vendor/firmware/a512_zap.b02
+vendor/firmware/a512_zap.b01
+vendor/firmware/a512_zap.mdt
+vendor/firmware/a512_zap.b00
+vendor/firmware/a512_zap.elf
