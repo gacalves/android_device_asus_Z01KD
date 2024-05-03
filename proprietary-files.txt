@@ -1427,6 +1427,32 @@ vendor/lib/libchromatix_ov13855_default_video_bu64297.so
 # Camera firmware
 vendor/firmware/cpp_firmware_v1_12_0.fw
 
+# Fingerprint sensor
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service:vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service_asus
+vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc:vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service_asus.rc
+vendor/lib64/hw/gxfingerprint.default.so
+vendor/lib64/hw/fingerprint.gx5216.so
+vendor/lib64/hw/fingerprint.default.so
+vendor/lib64/hw/fingerprint.goodixfp.so
+vendor/etc/firmware/goodixfp630.b00
+vendor/etc/firmware/goodixfp630.b01
+vendor/etc/firmware/goodixfp630.b02
+vendor/etc/firmware/goodixfp630.b03
+vendor/etc/firmware/goodixfp630.b04
+vendor/etc/firmware/goodixfp630.b05
+vendor/etc/firmware/goodixfp630.b06
+vendor/etc/firmware/goodixfp630.b07
+vendor/etc/firmware/goodixfp630.mdt
+vendor/etc/firmware/goodixfp660.b00
+vendor/etc/firmware/goodixfp660.b01
+vendor/etc/firmware/goodixfp660.b02
+vendor/etc/firmware/goodixfp660.b03
+vendor/etc/firmware/goodixfp660.b04
+vendor/etc/firmware/goodixfp660.b05
+vendor/etc/firmware/goodixfp660.b06
+vendor/etc/firmware/goodixfp660.b07
+vendor/etc/firmware/goodixfp660.mdt
+
 # GPU firmware
 vendor/firmware/a508_zap.b00
 vendor/firmware/a508_zap.b02
