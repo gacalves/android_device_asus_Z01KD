@@ -19,9 +19,9 @@ TARGET_BOOTLOADER_BOARD_NAME := sdm660
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
-# TODO: ANALISAR O QUE É ISTO.
+# TODO: Criar uma config especifica no kernal base
 # Kernel
-TARGET_KERNEL_CONFIG := Z01KD_defconfig
+TARGET_KERNEL_CONFIG := X00TD_defconfig
 
 #TODO: ANALISAR DE ONDE VIRÁ
 # Inherit the proprietary files
